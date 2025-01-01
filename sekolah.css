@@ -1,0 +1,82 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Allow vertical scrolling but prevent horizontal scrolling */
+}
+
+/* Rotating image container */
+.background-slider-container {
+    width: 100%;
+    height: 500px; /* Full height initially */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, height 0.3s ease; /* Smooth shrinking effect */
+    z-index: 10;
+}
+
+.background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    animation: rotateImages 15s infinite;
+}
+
+/* Keyframes for rotating background images */
+@keyframes rotateImages {
+    0% { background-image: url('https://www.pfarrwiesen-gymnasium.de/wp-content/uploads/2021/07/GIPS_Titelbild_m.jpg'); }
+    33% { background-image: url('https://gips-online.de/wp-content/uploads/SMV-Tag-Foto.jpg'); }
+    66% { background-image: url('https://www.pfarrwiesen-gymnasium.de/wp-content/uploads/2021/08/1307_GIPS_0416-scaled.jpg'); }
+    100% { background-image: url('https://www.pfarrwiesen-gymnasium.de/wp-content/uploads/2024/09/Kollegium-24_25-1-scaled.jpg'); }
+}
+
+.navbar {
+    background-color: #1c75bc;
+}
+
+.navbar-item {
+    color: white; /* White text for better contrast */
+    position: relative; /* Required for pseudo-element positioning */
+    overflow: hidden; /* Prevents underline from extending outside */
+}
+
+.navbar-item::after {
+    content: ''; /* Pseudo-element for underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initially hidden */
+    height: 2px; /* Thickness of the underline */
+    background-color: red; /* Red underline */
+    transition: width 0.3s ease; /* Smooth transition */
+}
+
+.navbar-item:hover::after {
+    width: 100%; /* Expands underline on hover */
+}
+
+.event-list {
+    background-color: #0056b3; /* Replace with your desired blue shade */
+    color: white; /* Ensure text is visible */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Footer spacing */
+.footer-space {
+    height: 100px;
+}

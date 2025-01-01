@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymnasium in den Pfarrwiesen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bulma-calendar/dist/js/bulma-calendar.min.js"></script>
+    <link rel="stylesheet" href="sekolah.css">
+</head>
+<body>
+
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">Home</a>
+                <a class="navbar-item">Documentation</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">Team</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">Schulleitung</a>
+                        <a class="navbar-item">Kollegium</a>
+                        <a class="navbar-item">Sozialarbeit</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-light">Log in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="rotating-image-container" class="background-slider-container">
+        <div class="background-slider"></div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Bulma Calendar with Events</h1>
+            <div class="columns">
+                <div class="column is-half">
+                    <input id="calendar" type="date" class="input" data-display-mode="inline" data-is-range="false">
+                </div>
+                <div class="column is-half">
+                    <div class="event-list">
+                        <h2 class="subtitle">The next dates at a glance</h2>
+                        <div id="events-container">
+                            <p>No date selected. Please click a date on the calendar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-space"></div>
+
+    <script src="sekolah.js"></script>
+
+</body>
+</html>

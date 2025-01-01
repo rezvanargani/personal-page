@@ -1,0 +1,83 @@
+/* Styling for #a */
+#a {
+    color: red;
+    text-align: center;
+}
+
+/* Styling for div */
+div {
+    background-color: blue;
+    width: 100px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    border: 10px solid black;
+}
+
+/* Styling for table */
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black; 
+    padding: 5px;
+}
+
+/* Styling for ordered and unordered lists */
+ol {
+    color: blue;
+}
+
+ul {
+    color: blue;
+}
+
+ul > li {
+    color: red;
+}
+
+/* Styling for buttons */
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    background-color: green;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+/* Styling for links */
+a {
+    color: blue;
+}
+
+/* Specific styling for Facebook link */
+a[href="https://facebook.com"] {
+    color: red;
+    text-decoration: none;
+}
+
+/* Media queries */
+@media (min-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-color: blue;
+    }
+
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
